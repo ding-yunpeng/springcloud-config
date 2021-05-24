@@ -1,27 +1,2 @@
-server:
-  port: 3366
-spring:
-  application:
-    name: config-client
-
-  cloud:
-    config:
-      label: main
-      name: config
-      profile: dev
-      uri: http://localhost:3344
-
-eureka:
-  instance:
-    hostname: cloud-config-center
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://eureka2.com:7002/eureka,http://eureka1.com:7001/eureka
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+config:
+  info: "master branch,springcloud-config/config-prod.yml version=1"
